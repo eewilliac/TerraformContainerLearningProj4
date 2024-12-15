@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Person</title>
+</head>
+<body>
+    {%if all_records%}
+        {%for person in all_records%}
+            <table border="1">
+                    <tr><td>First Name:</td><td>{{person.fname}}</td></tr>
+                    <tr><td>Last Name:</td><td>{{person.lname}}</td></tr>
+                    <tr><td>email:</td><td>{{person.email}}</td></tr>
+                    <tr><td></td><td><a href="#">back</a></td><td><td></td></tr>
+            </table>
+            <br>
+        {% endfor %}    
+    {%else%}    
+        <table border="1">
+            <tr><td>First Name:</td><td>{{fname}}</td></tr>
+            <tr><td>Last Name:</td><td>{{lname}}</td></tr>
+            <tr><td>email:</td><td>{{email}}</td></tr>
+            <tr><td></td><td><a href="#">back</a></td><td><td></td></tr>
+        </table>
+    {%endif%}
+</body>
+</html>
